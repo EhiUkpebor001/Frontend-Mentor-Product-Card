@@ -1,0 +1,238 @@
+
+body {
+  background-color: hsl(30, 38%, 92%);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 90px auto;
+  width: 600px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.image {
+  width: 300px;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("images/image-product-desktop.jpg");
+  background-size: cover;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.info {
+  padding: 10px 30px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.info h5 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+  font-family: 'Montserrat';
+}
+
+#heading {
+  font-weight: 700;
+  color: hsl(212, 21%, 14%);
+  width: 200px;
+  line-height: 30px;
+  font-family: 'Fraunces';
+}
+
+.info p {
+  font-size: 14px;
+  line-height: 20px;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+  width: 240px;
+  font-family: 'Montserrat';
+}
+
+#amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0px;
+}
+
+#discount {
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+  font-size: 32px;
+  font-family: 'Fraunces'; 
+}
+
+#oldPrice {
+  font-weight: 500;
+  font-size: 13px;
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+  margin-right: 40px;
+  font-family: 'Montserrat';
+}
+
+#cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px 30px;
+  width: 240px;
+  border-radius: 10px;
+  border: none;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-family: 'Montserrat';
+}
+
+#cart img {
+  margin: 0px 8px 2px 0px;
+}
+
+#cart:active {
+  background-color: hsl(158, 36%, 23%);
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+  background-color: hotpink;
+  margin-top: 40px;
+  padding: 20px;
+  border: 5px ridge purple;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+    .grid-container {
+        width: 90%;
+    }
+
+    .image {
+        background-position: 50%;
+        width: 100%;
+    }
+
+    .info {
+        padding: 5px 30px 25px;
+    }  
+    
+    #heading {
+        width: 100%;
+    }
+
+    .info p {
+        width: 98%;
+    }
+
+    #amount {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    #discount {
+        font-size: 30px;
+    }
+
+    #oldPrice {
+        margin-right: 10px;
+    }
+
+    #cart {
+        width: 100%;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 500px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    border-radius: 10px;
+  }
+
+  .image {
+    height: 400px;
+    background-size: cover;
+    background-position: 50%;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .info {
+    border-radius: 0px 0px 10px 10px;
+    padding: 5px 30px 25px;
+  }
+
+  #heading {
+    margin-top: -5px;
+    width: 100%;
+  }
+
+  .info p {
+    width: 95%;
+    word-spacing: 1px;
+  }
+
+  #cart {
+    width: 100%;
+  }      
+}
+
+@media (max-width: 375px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    border-radius: 10px;
+  }
+
+  .image {
+    height: 250px;
+    background-size: cover;
+    background-position: 50%;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .info {
+    border-radius: 0px 0px 10px 10px;
+    padding: 5px 30px 25px;
+  }
+
+  #heading {
+    margin-top: -5px;
+    width: 100%;
+    font-size: 28px;
+  }
+
+  .info p {
+    width: 98%;
+    word-spacing: 1px;
+    font-size: 12px;
+  }
+
+  #amount {
+    width: 80%;
+    flex-wrap: wrap;
+  }
+
+  #discount {
+    font-size: 30px;
+  }
+
+  #oldPrice {
+    margin-right: 30px;
+    font-size: 11px;
+  }
+
+  #cart {
+    width: 100%;
+  }
+}
